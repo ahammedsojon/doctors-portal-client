@@ -8,36 +8,42 @@ const bookings = [
     {
         id: '1',
         name: 'Teeth Orthodontics',
+        price: 22,
         time: '8:00 AM - 9:00 AM',
         space: 10
     },
     {
         id: '2',
         name: 'Cosmetic Densitry',
+        price: 18,
         time: '9:00 AM - 10:00 AM',
         space: 5
     },
     {
         id: '3',
         name: 'Teeth Cleaning',
+        price: 10,
         time: '11:00 AM - 12:30 PM',
         space: 7
     },
     {
         id: '4',
         name: 'Cavity Protection',
+        price: 15,
         time: '4:00 PM - 5:00 PM',
         space: 10
     },
     {
         id: '5',
         name: 'Pediatric Dental',
+        price: 20,
         time: '5:05 PM - 6:00 PM',
         space: 5
     },
     {
         id: '6',
         name: 'Oral Surgery',
+        price: 25,
         time: '6:00 PM - 7:00 PM',
         space: 7
     }

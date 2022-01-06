@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import BookingModal from '../BookingModal/BookingModal';
 
 const Booking = ({ booking, date, setBookingSuccess }) => {
-    const { name, time, space } = booking;
+    const { name, time, space, price } = booking;
     const [modalOpen, setModalOpen] = React.useState(false);
     const handleModalOpen = () => setModalOpen(true);
     const handleModalClose = () => setModalOpen(false);

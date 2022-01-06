@@ -10,11 +10,12 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import axios from 'axios';
 import useAuth from '../../../hooks/useAuth';
+import { Link } from 'react-router-dom';
 
 const Appointments = ({ date }) => {
     const [appointments, setAppointments] = useState([]);
     const { user, token } = useAuth();
-    // console.log(user)
+    console.log(appointments);
     useEffect(() => {
         const url = `https://calm-beyond-76948.herokuapp.com/appointments?email=${user?.email}&date=${date.toLocaleDateString()}`;
         // console.log(url, user.email)
@@ -40,6 +41,7 @@ const Appointments = ({ date }) => {
                                     <TableCell align="right">Patinet</TableCell>
                                     <TableCell align="right">Service</TableCell>
                                     <TableCell align="right">Time</TableCell>
+                                    <TableCell align="right">Action</TableCell>
                                 </TableRow>
                             </TableHead>
                             <TableBody>
@@ -54,6 +56,10 @@ const Appointments = ({ date }) => {
                                         </TableCell>
                                         <TableCell align="right">{row.serviceName}</TableCell>
                                         <TableCell align="right">{row.time}</TableCell>
+                                        <TableCell align="right">{row.payment ? 'paid' : 
+                                        <Link to={`/dashboard/payment/${row._id}`}><button>pay</button></Link>
+                                        }
+                                        </TableCell>
                                     </TableRow>
                                 ))
                                 }
